@@ -31,7 +31,12 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    string.split()
+    _list = []
+    for x in range(len(string)):
+        _list.append(string[x]*3)
+    return "".join(_list)
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +57,13 @@ def one(string):
 
 
 def two(number):
-    return False
+    for num in range (2, number+1):
+        if num == number:
+            return True
+        elif number%num == 0:
+            return False
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +83,11 @@ def two(number):
 
 
 def three(a):
-    return 1
+    total = 0 
+    for num in range(1,5):
+        new = str(a)*num
+        total = total + int(new)
+    return total
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,7 +119,7 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    return True
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -124,7 +139,11 @@ def four(string1, string2):
 
 
 def five():
-    return []
+    import random
+    new = []
+    for num in range(5):
+        new.append(random.randint(50,100) *2)
+    return new
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,6 +165,9 @@ def five():
 
 
 def six(string):
+    word = string.lower()
+    if word.endswith ('py'):
+        return True    
     return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -173,6 +195,10 @@ def six(string):
 
 
 def seven(a, b, c):
+    input = [a,b,c]
+    input.sort()
+    if (input[1] - input[0]) == (input[2] - input[1]):
+        return True
     return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
